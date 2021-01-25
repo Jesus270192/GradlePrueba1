@@ -1,0 +1,33 @@
+
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile group: 'org.mongodb', name: 'mongodb-driver', version: '3.12.7'
+    compile group: 'com.github.lalyos', name: 'jfiglet', version: '0.0.8'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task prueba{
+    println 'chuy'
+}
+
+application{
+    mainClassName 'Prueba'
+}
+
